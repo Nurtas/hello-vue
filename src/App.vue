@@ -1,5 +1,8 @@
 <template>
-
+<div>{{ greet }} {{ name }}</div>
+<div v-text="channel"></div>
+<div v-html="bold_text"></div>
+<div v-html="hack"></div>
 </template>
 
 <script>
@@ -7,7 +10,11 @@ export default {
   name: 'App',
   data() {
     return {
+      greet: "Hello",
       name: "Nurtas",
+      channel: "Code Snippet",
+      bold_text: "<b>bold</b>",
+      hack: `<a href="#" onClick="alert('You have been hacked!')">Win a prize!</a>`,
     }
   }
 }
